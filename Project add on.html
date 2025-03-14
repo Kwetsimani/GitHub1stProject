@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Olympic Games</title>
+    <style>
+      body {
+        background: rgb(193, 224, 224);
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 6px;
+        transition: all 200ms ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        background: rgb(79, 123, 138);
+        color: rgb(238, 187, 194);
+        transition: all 200ms ease-in-out;
+        border: none;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background: rgb(192, 150, 155);
+        color: rgb(44, 69, 77);
+      }
+
+      .container {
+        max-width: 650px;
+        background: linear-gradient(to right, pink, lightblue);
+        padding: 28px;
+        border-radius: 10px;
+        align-items: center;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 45px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 28px;
+      }
+
+      .grid {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .grid img {
+        width: 320px;
+        height: 250px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(159, 192, 192);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 17px;
+      }
+      .dark {
+        background: black;
+        color: rgb(185, 121, 121);
+      }
+      .dark .container {
+        background: linear-gradient(
+          to bottom,
+          rgb(102, 102, 102),
+          rgb(53, 52, 52)
+        );
+      }
+      .darkTheme {
+        background: black;
+        color: white;
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        border: white;
+      }
+
+      .darkTheme:hover {
+        background: white;
+        color: black;
+        border: white;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <button class="darkTheme">Light Theme</button>
+    <br />
+    <div class="container">
+      <h1>Summer Olympic Games</h1>
+      <h2>The Greatest sporting event</h2>
+      <a href="https://olympics.com/en/" target="_blank">
+        <img
+          src="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/The_Organisation/The-Olympic-Rings/Olympic_rings_TM_c_IOC_All_rights_reserved_1.jpg"
+          alt="olympic rings"
+        />
+      </a>
+      <br />
+      <div class="grid">
+        <a href="https://olympics.com/en/sports/athletics/" target="_blank">
+          <img
+            src="https://assets.aws.worldathletics.org/61efe29480400397b992035f.jpg"
+          />
+        </a>
+
+        <a href="https://olympics.com/en/sports/basketball/" target="_blank">
+          <img
+            src="https://img.olympicchannel.com/images/image/private/t_9-16_960/f_auto/primary/jnefp96qvymodu9lflih"
+          />
+        </a>
+
+        <a
+          href="https://olympics.com/en/paris-2024/sports/swimming"
+          target="_blank"
+        >
+          <img
+            src="https://img.olympics.com/images/image/private/t_16-9_640/f_auto/primary/ciohrpnlh5mcb7gtfna9"
+          />
+        </a>
+
+        <a
+          href="https://olympics.com/en/paris-2024/team/south-africa_athm4x100m--rsa01"
+          target="_blank"
+        >
+          <img
+            src="https://cdn.24.co.za/files/Cms/General/d/9986/68eefb50f7364f8aab893232e0a91665.png"
+          />
+        </a>
+      </div>
+      <hr />
+      <p>
+        The modern Olympic Games are the world's leading international sporting
+        events. They feature summer and winter sports competitions in which
+        thousands of athletes from around the world participate in a variety of
+        competitions. The Olympic Games are considered the world's foremost
+        sports competition, with more than 200 teams, representing sovereign
+        states and territories, participating. By default, the Games generally
+        substitute for any world championships during the year in which they
+        take place (however, each class usually maintains its own records). The
+        Olympics are staged every four years. Since 1994, they have alternated
+        between the Summer and Winter Olympics every two years during the
+        four-year Olympiad.
+        <a href="https://en.wikipedia.org/wiki/Olympic_Games" target="_blank"
+          >More info...</a
+        >
+      </p>
+      <hr />
+      <a
+        href="https://olympics.com/ioc/2024-2028-host-city-election"
+        target="_blank"
+      >
+        <div class="infomation">
+          <button>Next Olympic Games</button>
+        </div>
+      </a>
+    </div>
+    <br />
+    <footer>
+      Coded by
+      <a
+        href="https://www.shecodes.io/graduates/156733-kwetsimani-shivuri"
+        target="_blank"
+        >Kwetsimani Shivuri</a
+      >
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".darkTheme");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
